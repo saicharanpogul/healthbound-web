@@ -7,7 +7,7 @@ const sendFileResponse = async (
   svg: any
 ) => {
   if (filetype === "png") {
-    return new Response(png, { headers: { "Content-Type": "image/png" } });
+    return new Response(png, { headers: { "Content-Type": "image/webp" } });
   } else if (filetype === "svg") {
     return new Response(svg, { headers: { "Content-Type": "image/svg+xml" } });
   } else {
