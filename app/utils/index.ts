@@ -376,7 +376,7 @@ export const HBTBack = async (
       .attr("stroke-width", 2);
 
     const svg = window.d3.select("body").html();
-    const png = await sharp(Buffer.from(svg)).png().toBuffer();
+    const png = await sharp(Buffer.from(svg)).webp().toBuffer();
     return { svg, png };
   } catch (error) {
     throw error;
