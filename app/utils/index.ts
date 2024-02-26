@@ -227,8 +227,7 @@ export const HBTBack = async (
       .append("rect")
       .attr("width", 1080)
       .attr("height", 1080)
-      .attr("fill", backgroundColor)
-      .attr("rx", 10);
+      .attr("fill", backgroundColor);
 
     // center steps
     const center = hbt.append("g");
