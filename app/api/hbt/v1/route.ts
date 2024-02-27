@@ -1,6 +1,7 @@
 import fs from "fs";
 import _ from "lodash";
 import path from "path";
+import sharp from "sharp";
 
 const paramMissing = async (param: string | string[], name: string) => {
   if (!param) {
@@ -16,7 +17,7 @@ const paramMissing = async (param: string | string[], name: string) => {
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const { data, address, datetime } = Object.fromEntries(
+  const { data, address, datetime, type } = Object.fromEntries(
     searchParams.entries()
   );
 
@@ -43,7 +44,14 @@ export async function GET(req: Request) {
   svg = svg.replace("{data}", data);
   svg = svg.replace("{date}", formattedDate);
 
-  return new Response(svg, {
-    headers: { "Content-Type": "image/svg+xml" },
-  });
+  if (type === "svg") {
+    return new Response(svg, {
+      headers: { "Content-Type": "image/svg+xml" },
+    });
+  } else {
+    const png = await sharp(Buffer.from(svg)).png().toBuffer();
+    return new Response(png, {
+      headers: { "Content-Type": "image/png" },
+    });
+  }
 }
