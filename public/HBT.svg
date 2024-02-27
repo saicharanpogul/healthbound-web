@@ -10,7 +10,6 @@
     <clipPath id="clip-0">
       <rect width="1080" height="1080" style="fill: rgb(67, 224, 179); stroke: rgb(28, 73, 66);" transform="matrix(1, 0.000001, -0.000001, 1, 1.691571, -0.413292)"/>
     </clipPath>
-    <linearGradient id="gradientTwo" gradientUnits="userSpaceOnUse" x1="120.257" y1="109.796" x2="120.257" y2="909.78" xlink:href="#gradientThree"/>
     <linearGradient id="gradientThree" bx:pinned="true">
       <stop offset="0" style="stop-color: rgb(28, 73, 66);"/>
       <stop offset="1" style="stop-color: rgb(67, 224, 179);"/>
