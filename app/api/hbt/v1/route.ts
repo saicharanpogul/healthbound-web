@@ -1,5 +1,6 @@
 import fs from "fs";
 import _ from "lodash";
+import path from "path";
 
 const paramMissing = async (param: string | string[], name: string) => {
   if (!param) {
@@ -33,7 +34,7 @@ export async function GET(req: Request) {
   const _date = new Date(Number(datetime));
   const formattedDate = `${_date.getDate()}/${_date.getMonth()}/${_date.getFullYear()}`;
 
-  const filePath = "./public/HBT.svg";
+  const filePath = path.join(process.cwd(), "public", "HBT.svg");
   const image = fs.readFileSync(filePath, "utf-8");
 
   let svg = image;
