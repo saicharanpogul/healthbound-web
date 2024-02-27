@@ -3,6 +3,25 @@ import _ from "lodash";
 import path from "path";
 import sharp from "sharp";
 
+path.resolve(process.cwd(), "fonts", "fonts.conf");
+path.resolve(process.cwd(), "fonts", "Poppins-Black.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-BlackItalic.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-Bold.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-BoldItalic.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-ExtraBold.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-ExtraBoldItalic.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-Italic.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-Light.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-LightItalic.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-Medium.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-MediumItalic.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-Regular.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-SemiBold.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-SemiBoldItalic.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-Thin.ttf");
+path.resolve(process.cwd(), "fonts", "Poppins-ThinItalic.ttf");
+path.resolve(process.cwd(), "fonts", "RammettoOne-Regular.ttf");
+
 const paramMissing = async (param: string | string[], name: string) => {
   if (!param) {
     console.log(param, name);
