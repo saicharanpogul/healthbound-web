@@ -10,6 +10,8 @@
     <clipPath id="clip-0">
       <rect width="1080" height="1080" style="fill: rgb(67, 224, 179); stroke: rgb(28, 73, 66);" transform="matrix(1, 0.000001, -0.000001, 1, 1.691571, -0.413292)"/>
     </clipPath>
+    <style>@import url(https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);
+    </style>
   </defs>
   <rect width="1080" height="1080" style="fill: rgb(67, 224, 179); stroke: rgb(28, 73, 66); transform-origin: 540px 540px;" transform="matrix(1, 0.000001, -0.000001, 1, 0.00054000007, 0.000540000099)"/>
   <rect x="110" y="110" width="860" height="860" style="fill: rgba(216, 216, 216, 0); stroke: rgb(28, 73, 66);"/>
