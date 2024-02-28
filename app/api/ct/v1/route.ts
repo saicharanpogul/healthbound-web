@@ -36,21 +36,32 @@ const paramMissing = async (param: string | string[], name: string) => {
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const { soul, address, type } = Object.fromEntries(searchParams.entries());
+  const { data, address, datetime, type } = Object.fromEntries(
+    searchParams.entries()
+  );
 
-  await paramMissing(soul as string, Object.keys({ soul }).pop()!.toString());
+  await paramMissing(
+    datetime as string,
+    Object.keys({ datetime }).pop()!.toString()
+  );
+
+  await paramMissing(data as string, Object.keys({ data }).pop()!.toString());
   await paramMissing(
     address as string,
     Object.keys({ address }).pop()!.toString()
   );
 
-  const filePath = path.join(process.cwd(), "public", "HBT.svg");
+  const _date = new Date(Number(datetime));
+  const formattedDate = `${_date.getDate()}/${_date.getMonth()}/${_date.getFullYear()}`;
+
+  const filePath = path.join(process.cwd(), "public", "CT.svg");
   const image = fs.readFileSync(filePath, "utf-8");
 
   let svg = image;
 
   svg = svg.replace("{address}", address);
-  svg = svg.replace("{soul}", soul);
+  svg = svg.replace("{data}", data);
+  svg = svg.replace("{date}", formattedDate);
 
   if (type === "svg") {
     return new Response(svg, {
